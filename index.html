@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rocky Marathon Training Plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..900&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="page">
+    <div class="page-header">
+      <h1 class="page-title">Rocky Marathon<br>Training Plan</h1>
+      <div class="race-day-badge stack">
+        <span class="small-label">Race day</span>
+        <strong>Nov 14, 2026</strong>
+      </div>
+    </div>
+
+    <div class="card-row">
+      <div class="card countdown-card">
+        <div class="card-header stack">
+          <span class="small-label yellow-text">Countdown</span>
+          <h2 class="card-title">Days til the bell</h2>
+        </div>
+        <div class="stack">
+          <strong class="big-number gold-text" id="countdown-days">0</strong>
+          <span class="small-label">Days to go</span>
+        </div>
+        <div class="timer-grid">
+          <div class="timer-box stack">
+            <strong id="countdown-hours">00</strong>
+            <span class="small-label">Hours</span>
+          </div>
+          <div class="timer-box stack">
+            <strong id="countdown-minutes">00</strong>
+            <span class="small-label">Minutes</span>
+          </div>
+          <div class="timer-box stack">
+            <strong id="countdown-seconds">00</strong>
+            <span class="small-label">Seconds</span>
+          </div>
+        </div>
+        <p class="bold-text">“It ain't about how hard you hit. It's about how hard you can get hit and keep moving forward.”</p>
+      </div>
+
+      <!-- WEEKLY PLAN: update the round, week label, and 7 rows below each week. Keep data-date as YYYY-MM-DD. -->
+      <div class="card plan-card">
+        <div class="card-header stack">
+          <span class="small-label yellow-text">Round 3</span>
+          <h2 class="card-title">This week's training · Oct 5 – Oct 11</h2>
+        </div>
+        <div class="table-scroll">
+          <table class="training-table">
+            <thead>
+              <tr>
+                <th class="small-label muted-text">Day</th>
+                <th class="small-label muted-text">Workout</th>
+                <th class="small-label muted-text">Distance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-date="2026-10-05">
+                <td><div class="stack"><strong>Monday</strong><span>Oct 5</span></div></td>
+                <td>Full rest. Mobility and foam roll, 20 min.</td>
+                <td><strong class="no-wrap">—</strong></td>
+              </tr>
+              <tr data-date="2026-10-06">
+                <td><div class="stack"><strong>Tuesday</strong><span>Oct 6</span></div></td>
+                <td>Easy run at conversational pace. 4 × 20s strides to finish.</td>
+                <td><strong class="no-wrap">6 mi</strong></td>
+              </tr>
+              <tr data-date="2026-10-07">
+                <td><div class="stack"><strong>Wednesday</strong><span>Oct 7</span></div></td>
+                <td>Bodyweight circuit: squats, lunges, push-ups, plank. 4 rounds.</td>
+                <td><strong class="no-wrap">—</strong></td>
+              </tr>
+              <tr data-date="2026-10-08">
+                <td><div class="stack"><strong>Thursday</strong><span>Oct 8</span></div></td>
+                <td>2 mi warm-up, 6 × 800m at 5K pace with 400m jog, 1 mi cool-down.</td>
+                <td><strong class="no-wrap">7 mi</strong></td>
+              </tr>
+              <tr data-date="2026-10-09">
+                <td><div class="stack"><strong>Friday</strong><span>Oct 9</span></div></td>
+                <td>Recovery run, keep heart rate low.</td>
+                <td><strong class="no-wrap">4 mi</strong></td>
+              </tr>
+              <tr data-date="2026-10-10">
+                <td><div class="stack"><strong>Saturday</strong><span>Oct 10</span></div></td>
+                <td>Steady long run. Last 2 mi at marathon pace. Practice fueling.</td>
+                <td><strong class="no-wrap">14 mi</strong></td>
+              </tr>
+              <tr data-date="2026-10-11">
+                <td><div class="stack"><strong>Sunday</strong><span>Oct 11</span></div></td>
+                <td>Bike or swim, 45 min easy. Stairs optional.</td>
+                <td><strong class="no-wrap">—</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live countdown + today highlight. CSS alone can't tell time, so this is the only script. -->
+  <script src="javascript.js"></script>
+</body>
+
+</html>

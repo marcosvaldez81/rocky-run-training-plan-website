@@ -1,0 +1,218 @@
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-yellow: #f8de75;
+  --color-gold: #d4af37;
+  --color-muted: #b9b4a8;
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-today-row: rgba(248, 222, 117, 0.2);
+  --color-background-tint: #4d4d4d;
+  --font-heading: "Geist", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--color-white);
+  background-color: var(--color-background-tint);
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+h1,
+h2,
+strong {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 800;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0;
+}
+
+/* Layout */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 40px;
+}
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.page-title {
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Cards */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-black);
+}
+
+.countdown-card {
+  flex: 0 1 380px;
+}
+
+.plan-card {
+  flex: 0 1 640px;
+  min-width: 0;
+}
+
+/* Stack the cards full-width once the window is too narrow for both side by side. */
+@media (max-width: 1100px) {
+  .countdown-card,
+  .plan-card {
+    flex: 1 1 100%;
+  }
+}
+
+.card-header {
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--color-yellow);
+}
+
+.card-title {
+  font-size: 22px;
+}
+
+/* Text */
+
+.small-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.yellow-text {
+  color: var(--color-yellow);
+}
+
+.gold-text {
+  color: var(--color-gold);
+}
+
+.muted-text {
+  color: var(--color-muted);
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* Countdown */
+
+.race-day-badge {
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  font-size: 20px;
+}
+
+.big-number {
+  font-size: 128px;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.timer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.timer-box {
+  align-items: center;
+  padding: 14px 8px;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  font-size: 32px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Table */
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.training-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.training-table th {
+  padding: 0 16px 12px;
+  text-align: left;
+}
+
+.training-table td {
+  padding: 16px;
+  border-top: 1px solid var(--color-border);
+  vertical-align: top;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.training-table strong {
+  text-transform: uppercase;
+}
+
+.today-row {
+  background-color: var(--color-today-row);
+}
